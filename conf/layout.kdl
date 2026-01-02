@@ -1,0 +1,62 @@
+// ----------------------------------------------------- 
+// Layout
+// ----------------------------------------------------- 
+
+layout {
+    always-center-single-column
+    empty-workspace-above-first
+
+    background-color "transparent"
+
+    focus-ring {
+        width 3
+        active-gradient from="#4D0099" to="#9EB3FF" angle=135
+        inactive-color "#666699"
+        // active-gradient from="#f38ba8" to="#f9e2af" angle=45 relative-to="workspace-view"
+        // active-gradient from="red" to="orange" angle=45 relative-to="workspace-view" in="oklch longer hue"
+    }
+    
+    shadow {
+        on
+        softness 20
+        spread 5
+        offset x=5 y=5
+        draw-behind-window true
+        color "#000000aa"
+    }
+
+    border {
+        off
+        width 2
+
+        active-gradient from="red" to="orange" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        inactive-gradient from="#585b70" to="#7f849c" angle=45 relative-to="workspace-view"
+    }
+
+    insert-hint {
+        color "#ffc87f80"
+        gradient from="#f38ba880" to="#f9e2af80" angle=45 relative-to="workspace-view"
+    }
+
+    preset-column-widths {
+        proportion 0.3333333333333333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    /-preset-window-heights {
+        proportion 0.3333333333333333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.75; }
+
+    gaps 16
+
+    struts {
+        left 3
+        right 3
+        top 8
+    }
+}
