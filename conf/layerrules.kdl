@@ -1,0 +1,27 @@
+// ----------------------------------------------------- 
+// Layer Rules
+// ----------------------------------------------------- 
+
+layer-rule {
+    match namespace="swww"
+    //match namespace="ags-backdrop"
+
+    place-within-backdrop true
+}
+
+layer-rule {
+    // mako
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+layer-rule {
+
+    match namespace="^way-edges-widget$"
+  // shadow {
+  //   on
+  //   softness 10
+  //   offset x=0 y=0
+  //   color "#00000055"
+  // }
+}
