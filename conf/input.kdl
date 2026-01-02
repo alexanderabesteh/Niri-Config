@@ -1,0 +1,30 @@
+// ----------------------------------------------------- 
+// Input
+// ----------------------------------------------------- 
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            variant ",phonetic"
+            options "compose:ralt, grp:alt_shift_toggle, ctrl:nocaps"
+        }
+
+        // Enable numlock on startup, omitting this setting disables it.
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        accel-speed 0.2
+        scroll-method "two-finger"
+    }
+
+    mouse {
+        natural-scroll
+        accel-speed 0.2
+    }
+    focus-follows-mouse
+    //focus-follows-mouse max-scroll-amount="0%"
+}
