@@ -1,0 +1,11 @@
+// ----------------------------------------------------- 
+// Debug
+// ----------------------------------------------------- 
+
+debug {
+    render-drm-device "/dev/dri/renderD129"
+    // render-drm-device "/dev/dri/renderD128"
+    // wait-for-frame-completion-in-pipewire
+    // ignore-drm-device "/dev/dri/card0"
+    // wait-for-frame-completion-before-queueing
+}
