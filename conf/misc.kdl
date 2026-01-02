@@ -1,0 +1,22 @@
+// ----------------------------------------------------- 
+// Miscellaneous
+// ----------------------------------------------------- 
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+overview {
+    backdrop-color "#0E0825"
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+prefer-no-csd
+
+// Screenshot Path
+screenshot-path "~/Documents/Photos/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
