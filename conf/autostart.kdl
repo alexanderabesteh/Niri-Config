@@ -1,0 +1,23 @@
+// ----------------------------------------------------- 
+// Autostart
+// ----------------------------------------------------- 
+
+spawn-at-startup "swaync"
+spawn-at-startup "pipewire"
+spawn-at-startup "nm-applet"
+spawn-at-startup "blueman-applet"
+spawn-at-startup "clipse" "--listen"
+spawn-at-startup "xwayland-satellite" ":12"
+spawn-at-startup "nwg-drawer" "-r"
+
+spawn-at-startup "swww-daemon"
+// spawn-at-startup "bash" "-c" "sleep 1"
+spawn-at-startup "swww" "img" "~/Documents/Assets/Wallpapers/purple-nebula-haze-stars-4k-r6-2560x1600.jpg" "--transition-type=center"
+spawn-at-startup "bash" "-c" "GSK_RENDERER=cairo ags run --gtk 4"
+spawn-at-startup "bash" "-c" "ollama serve"
+spawn-at-startup "way-edges"
+spawn-at-startup "kitty" "-T" "traytui" "tray-tui"
+
+spawn-at-startup "kitty"
+//spawn-at-startup "bash" "-c" "sleep 2 && linuxqq"
+spawn-at-startup "librewolf"
