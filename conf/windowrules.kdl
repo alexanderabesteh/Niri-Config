@@ -1,0 +1,187 @@
+// ----------------------------------------------------- 
+// Window Rules
+// ----------------------------------------------------- 
+
+workspace "code" {
+  //open-on-output "eDP-2"
+}
+
+workspace "browser" {
+    //open-on-output "eDP-2"
+}
+
+workspace "settings" {
+  //open-on-output "eDP-2"
+}
+
+
+window-rule {
+  draw-border-with-background false
+  geometry-corner-radius 16
+  clip-to-geometry true
+}
+
+window-rule {
+  match title=r#"^(Open File)(.*)$"#
+  match title=r#"^(Select a File)(.*)$"#
+  match title=r#"^(Choose wallpaper)(.*)$"#
+  match title=r#"^(Open Folder)(.*)$"#
+  match title=r#"^(Save As)(.*)$"#
+  match title=r#"^(Library)(.*)$"#
+
+  // image
+  match app-id="imv"
+
+  // zen browser video
+  match title="Picture-in-Picture"
+
+  match app-id="mpv"
+
+  open-floating true
+}
+
+window-rule {
+  match app-id="librewolf"
+  open-on-workspace "browser"
+  open-maximized true
+}
+
+window-rule {
+  match title="clipse"
+  match title="traytui"
+    
+  open-floating true
+
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 870; }
+
+  //default-floating-position x=0 y=0 relative-to="bottom"
+  baba-is-float true
+}
+
+window-rule {
+  match title="traytui"
+  open-on-workspace "settings"
+  default-column-width { fixed 1900; }
+}
+
+window-rule {
+  match is-focused=false
+
+  opacity 0.98
+}
+
+/-window-rule {
+    match at-startup=false
+    exclude app-id="^kitty$"
+    exclude app-id="^neovim$"
+    exclude app-id="librewolf$"
+    open-floating true
+}
+
+/-window-rule {
+    match is-active-in-column=false
+
+    min-height 100
+    max-height 100
+}
+
+/-window-rule {
+    match app-id="Adwaita"
+    // match app-id="TextEditor"
+    // opacity 0.5
+    // block-out-from "screencast"
+    geometry-corner-radius 12
+    // geometry-corner-radius 0 0 8 8
+    clip-to-geometry false
+    border {
+        // off
+        // width 12
+        // width 2
+    }
+}
+
+/-window-rule {
+    match app-id="^gnome-terminal-server$"
+    // opacity 0.5
+    // block-out-from "screen-capture"
+    clip-to-geometry false
+    geometry-corner-radius 8 8 0 0
+    border {
+        width 4
+    }
+}
+
+/-window-rule {
+    match title="~/source"
+    geometry-corner-radius 12 24 32 64
+}
+
+/-window-rule {
+    match app-id="code"
+    // opacity 0.98
+    border {
+        // off
+    }
+}
+
+/-window-rule {
+    match app-id="^gimp" title="^GIMP Startup$"
+
+    open-focused false
+}
+
+/-window-rule {
+    match app-id="^kitty$"
+    match app-id="^neovim$"
+    exclude is-active=true
+
+    opacity 0.95
+}
+
+/-window-rule {
+    match app-id="^kitty$"
+    match app-id="^neovim$"
+    match app-id="^code$"
+    // match title="^niri$"
+    match app-id="^labwc$"
+
+    border { on; }
+    geometry-corner-radius 8
+    // geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match title="steam"
+    match app-id=r#"^*steam_app*"#
+    match app-id=r#"^*Minecraft*"#
+    match app-id=r#"^*rpcs3*"#
+    open-fullscreen true
+}
+
+window-rule {
+  match title="QQ"
+  match app-id="cinny"
+  match app-id="discord"
+  //open-on-workspace "chat"
+}
+
+window-rule {
+  match title="Thunar"
+  match title="KeePassXC"
+  match title="btop"
+  match title="Waypaper"
+  match app-id="virt-manager"
+  match app-id="geeqie"
+
+  open-floating true
+}
+
+window-rule {
+  match title="Waypaper"
+    
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 870; }
+
+}
